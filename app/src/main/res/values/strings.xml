@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">OnlineStore</string>
+    <string name="hello_main">Hello,</string>
+    <string name="hari_prasad">Hari Prasad</string>
+    <string name="search">Search</string>
+    <string name="featured">Featured</string>
+    <string name="all">All</string>
 </resources>

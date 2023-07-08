@@ -3,5 +3,14 @@
     <style name="Base.Theme.OnlineStore" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="mainBackgroundColor">@color/black</item>
+        <item name="categoriesBackgroundColor">@color/black</item>
+        <item name="basket_icon">@drawable/light_basket_icon</item>
+        <item name="like_icon">@drawable/light_like_icon</item>
+        <item name="search_icon">@drawable/light_search_icon</item>
+        <item name="searchViewBackgroundColor">@color/light_grey</item>
+        <item name="basket_card_background">@color/light_grey</item>
+        <item name="textColor">@color/white</item>
+
     </style>
 </resources>

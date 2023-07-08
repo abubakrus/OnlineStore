@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mainBackgroundColor" format="reference|color"/>
+    <attr name="categoriesBackgroundColor" format="reference|color"/>
+<!--    //<attr name="calculatorBackgroundColor" format="reference|color"/>-->
+<!--    <attr name="buttonBackgroundColor" format="reference|color"/>-->
+    <attr name="textColor" format="reference|color"/>
+    <attr name="basket_icon" format="reference"/>
+    <attr name="like_icon" format="reference"/>
+    <attr name="search_icon" format="reference"/>
+    <attr name="searchViewBackgroundColor" format="reference|color"/>
+    <attr name="basket_card_background" format="reference|color"/>
+</resources>
