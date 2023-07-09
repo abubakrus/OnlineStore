@@ -6,6 +6,5 @@ import java.util.TimeZone
 
 data class RecommendationEvent(
     val id: String,
-    val title: String,
     val imageUrl: String,
 )

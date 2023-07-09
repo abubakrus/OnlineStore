@@ -10,9 +10,10 @@
     app:cardCornerRadius="30dp">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_view"
+        android:id="@+id/image_view_top_product"
         android:layout_width="match_parent"
         android:layout_height="170dp"
+        android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/CornerRadius20Percent"
         tools:src="@tools:sample/avatars" />
 
@@ -24,7 +25,7 @@
         android:paddingStart="12dp">
 
         <TextView
-            android:id="@+id/title_product"
+            android:id="@+id/title_top_product_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
