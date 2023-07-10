@@ -43,7 +43,7 @@
         android:id="@+id/recycler_view_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

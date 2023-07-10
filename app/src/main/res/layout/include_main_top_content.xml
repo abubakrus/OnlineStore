@@ -34,10 +34,10 @@
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/search_view_background"
+            android:backgroundTint="?attr/categoriesBackgroundColor"
+            android:elevation="0dp"
             android:iconifiedByDefault="false"
             android:queryBackground="@null"
-            android:backgroundTint="?attr/categoriesBackgroundColor"
-            android:elevation="4dp"
             android:queryHint="@string/search"
             android:searchIcon="?attr/search_icon" />
 
@@ -50,21 +50,24 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="?attr/categoriesBackgroundColor"
         android:elevation="4dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="50dp">
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp">
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            app:srcCompat="?attr/basket_icon"/>
+            app:srcCompat="?attr/basket_icon" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_marginTop="175dp"
-        app:cardCornerRadius="15dp">
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
