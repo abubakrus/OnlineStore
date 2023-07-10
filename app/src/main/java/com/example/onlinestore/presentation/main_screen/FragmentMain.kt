@@ -7,9 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.onlinestore.R
 import com.example.onlinestore.databinding.FragmentMainBinding
+import com.example.onlinestore.presentation.main_screen.recycler_view.all_product.AllCategoryAdapter
 import com.example.onlinestore.presentation.main_screen.recycler_view.top_product.TopProductAdapter
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 class FragmentMain : Fragment() {
@@ -21,6 +24,9 @@ class FragmentMain : Fragment() {
 
     private val topProductAdapter: TopProductAdapter by lazy {
         TopProductAdapter()
+    }
+    private val allCategoryAdapter: AllCategoryAdapter by lazy {
+        AllCategoryAdapter()
     }
 
     override fun onCreateView(
@@ -36,11 +42,13 @@ class FragmentMain : Fragment() {
 
     private fun initViews() = with(binding) {
         binding.includeMainContent.recyclerViewHorizontal.adapter = topProductAdapter
+        binding.includeMainContent.recyclerViewVertical.adapter = allCategoryAdapter
     }
-    private fun observeData(){
-        viewModel.uiStateFLow.onEach {uiState ->
+    private fun observeData() {
+        viewModel.uiStateFLow.onEach { uiState ->
             topProductAdapter.updateData(uiState.topProduct)
-        }
+            allCategoryAdapter.updateData(uiState.allCategory)
+        }.launchIn(lifecycleScope)
     }
 
 }

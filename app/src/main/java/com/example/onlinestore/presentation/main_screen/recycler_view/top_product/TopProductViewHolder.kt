@@ -11,6 +11,7 @@ class TopProductViewHolder(
 ):RecyclerView.ViewHolder(binding.root){
     fun bind(topProduct: TopProduct) = with(binding){
         titleTopProductText.text = topProduct.title
+        priseProduct.text = topProduct.prise.toString()
         loadImageByUrl(imageUrl = topProduct.imageUrl, imageView = imageViewTopProduct)
     }
     private fun loadImageByUrl(imageUrl:String, imageView: ImageView){

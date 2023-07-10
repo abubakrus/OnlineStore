@@ -113,13 +113,13 @@ class FakeData {
             ),
             TopProduct(
                 UUID.randomUUID().toString(),
-                title = "Cosmograph Daytona",
+                title = "Cosmograph \n Daytona",
                 prise = 950000,
                 imageUrl = "https://media.petitegeneve.com/uploads/2020-02-03/Petite-Geneve-Petrovic-2020-02-03-rolex-cosmograph-daytona-ref-116508-01.jpg",
             ),
             TopProduct(
                 UUID.randomUUID().toString(),
-                title = "Summer Walk Loafers",
+                title = "Summer \n Walk Loafers",
                 prise = 80000,
                 imageUrl = "https://eac-sale.ru/obuv/images/30-12.jpg",
             ),
