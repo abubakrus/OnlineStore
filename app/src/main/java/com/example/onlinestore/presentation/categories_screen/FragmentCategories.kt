@@ -6,27 +6,45 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.onlinestore.R
+import com.example.onlinestore.databinding.FragmentCategoriesBinding
+import com.example.onlinestore.databinding.FragmentMainBinding
+import com.example.onlinestore.presentation.categories_screen.recycler_view.CategoryEventAdapter
+import com.example.onlinestore.presentation.main_screen.recycler_view.top_product.TopProductAdapter
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class FragmentCategories : Fragment() {
-
-    companion object {
-        fun newInstance() = FragmentCategories()
+    private val binding: FragmentCategoriesBinding by lazy {
+        FragmentCategoriesBinding.inflate(layoutInflater)
     }
 
-    private lateinit var viewModel: FragmentCategoriesViewModel
+    private val viewModel: FragmentCategoriesViewModel by viewModels()
+
+    private val categoryEventAdapter: CategoryEventAdapter by lazy {
+        CategoryEventAdapter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_categories, container, false)
+    ): View = binding.root
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initViews()
+        observeData()
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FragmentCategoriesViewModel::class.java)
-        // TODO: Use the ViewModel
+    private fun initViews() = with(binding){
+        binding.includeCategoriesContent.recyclerViewCategories.adapter = categoryEventAdapter
+    }
+    private fun observeData(){
+        viewModel.categoriesEventFlow.onEach {
+            categoryEventAdapter.updateData(it)
+        }.launchIn(lifecycleScope)
     }
 
 }
