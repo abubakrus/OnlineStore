@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.onlinestore.R
 import com.example.onlinestore.databinding.FragmentMainBinding
 import com.example.onlinestore.presentation.main_screen.recycler_view.all_product.AllCategoryAdapter
@@ -40,6 +41,9 @@ class FragmentMain : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.includeMainTopContent.searchView.setOnClickListener {
+            findNavController().navigate()
+        }
         initViews()
         observeData()
     }
