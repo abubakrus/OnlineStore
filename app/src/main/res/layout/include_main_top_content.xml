@@ -39,7 +39,8 @@
             android:iconifiedByDefault="false"
             android:queryBackground="@null"
             android:queryHint="@string/search"
-            android:searchIcon="?attr/search_icon" />
+            android:searchIcon="?attr/search_icon"
+            />
 
     </LinearLayout>
 

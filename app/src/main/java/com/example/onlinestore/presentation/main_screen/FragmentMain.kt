@@ -42,7 +42,7 @@ class FragmentMain : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.includeMainTopContent.searchView.setOnClickListener {
-            findNavController().navigate()
+            findNavController().navigate(R.id.action_fragmentMain_to_fragmentCategories)
         }
         initViews()
         observeData()

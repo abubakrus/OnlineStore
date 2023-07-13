@@ -21,7 +21,7 @@ class FragmentCategories : Fragment() {
         FragmentCategoriesBinding.inflate(layoutInflater)
     }
 
-    private val viewModel: FragmentCategoriesViewModel by viewModels()
+    private val viewModel: FragmentCategoriesViewModel = FragmentCategoriesViewModel()
 
     private val categoryEventAdapter: CategoryEventAdapter by lazy {
         CategoryEventAdapter()
@@ -36,10 +36,12 @@ class FragmentCategories : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initViews()
         observeData()
+        binding.includeCategoriesTopContent.searchView.isEnabled = false
+        binding.includeCategoriesTopContent.searchView.set
     }
 
     private fun initViews() = with(binding){
-        binding.includeCategoriesContent.recyclerViewCategories.adapter = categoryEventAdapter
+        includeCategoriesContent.recyclerViewCategories.adapter = categoryEventAdapter
     }
     private fun observeData(){
         viewModel.categoriesEventFlow.onEach {

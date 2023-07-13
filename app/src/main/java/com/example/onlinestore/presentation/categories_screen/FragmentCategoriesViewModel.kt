@@ -20,7 +20,3 @@ class FragmentCategoriesViewModel : ViewModel() {
     }
 }
 
-private fun Any.tryEmit(categoryEvent: Any) {
-    TODO("Not yet implemented")
-}
-
