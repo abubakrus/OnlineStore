@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.onlinestore.R
 import com.example.onlinestore.databinding.FragmentCategoriesBinding
 import com.example.onlinestore.databinding.FragmentMainBinding
@@ -36,8 +37,7 @@ class FragmentCategories : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initViews()
         observeData()
-        binding.includeCategoriesTopContent.searchView.isEnabled = false
-        binding.includeCategoriesTopContent.searchView.set
+
     }
 
     private fun initViews() = with(binding){

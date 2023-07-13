@@ -49,9 +49,9 @@ class FragmentMain : Fragment() {
     }
 
     private fun initViews() = with(binding) {
-        binding.includeMainContent.recyclerViewHorizontal.adapter = topProductAdapter
-        binding.includeMainContent.recyclerViewVertical.adapter = allCategoryAdapter
-        binding.includeMainTopContent.viewPager.adapter = viewPagerAdapter
+        includeMainContent.recyclerViewHorizontal.adapter = topProductAdapter
+        includeMainContent.recyclerViewVertical.adapter = allCategoryAdapter
+        includeMainTopContent.viewPager.adapter = viewPagerAdapter
     }
     private fun observeData() {
         viewModel.uiStateFLow.onEach { uiState ->

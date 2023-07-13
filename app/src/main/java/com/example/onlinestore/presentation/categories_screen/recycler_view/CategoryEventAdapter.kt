@@ -20,7 +20,7 @@ class CategoryEventAdapter : RecyclerView.Adapter<CategoryEventViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryEventViewHolder {
         val view = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.include_categories_content, parent, false)
+            .inflate(R.layout.item_recycler_view_categories, parent, false)
         val binding = ItemRecyclerViewCategoriesBinding.bind(view)
         return CategoryEventViewHolder(binding)
     }
