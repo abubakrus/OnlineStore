@@ -40,6 +40,7 @@
             android:queryBackground="@null"
             android:queryHint="@string/search"
             android:searchIcon="?attr/search_icon"
+            android:inputType="none"
             />
 
     </LinearLayout>

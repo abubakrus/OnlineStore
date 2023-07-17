@@ -30,6 +30,20 @@ class FakeData {
                 prise = 2250,
                 imageUrl = "https://avatars.dzeninfra.ru/get-zen_doc/2746730/pub_5f3512b0bfb29f5b5d7f4350_5f3512faeae0783182a660f5/scale_1200"
             ),
+            AllCategory(
+                UUID.randomUUID().toString(),
+                title = "Jordan 1 Retro",
+                descripition = "Мужские кроссовки для бега",
+                prise = 25500,
+                imageUrl = "https://u.kanobu.ru/editor/images/99/e3b3d214-aa64-4ebc-baf4-564e95a0ea68.webp"
+            ),
+            AllCategory(
+                UUID.randomUUID().toString(),
+                title = "Orient AG03001W",
+                descripition = "Мужские часы",
+                prise = 85500,
+                imageUrl = "https://www.alltime.ru/obj/catalog/watch/orient/img/big/AG03001W.jpg"
+            ),
         )
 
         fun fakeCategoryEvent() = listOf(
@@ -119,6 +133,51 @@ class FakeData {
                 prise = 80000,
                 imageUrl = "https://eac-sale.ru/obuv/images/30-12.jpg",
             ),
+            TopProduct(
+                UUID.randomUUID().toString(),
+                title = "Louis Vuitton",
+                prise = 125000,
+                imageUrl = "https://sneakerfreak.ru/wp-content/uploads/2022/12/Louis-Vuitton-x-Nike-Air-Force-1-Sothebys-scaled.jpg",
+            ),
+            TopProduct(
+                UUID.randomUUID().toString(),
+                title = "Rolex ",
+                prise = 659000,
+                imageUrl = "https://alimentola.info/uploads/posts/2022-01/1641417476_39-alimentola-info-p-chasi-roleks-brilliantovie-devushka-krasiv-40.jpg",
+            ),
+            TopProduct(
+                UUID.randomUUID().toString(),
+                title = "Voutilainen",
+                prise = 805000,
+                imageUrl = "https://www.alltime.ru/obj/article/image-blog/rejting_chasov/rejting_chasov_6.jpg",
+            ),
+            TopProduct(
+                UUID.randomUUID().toString(),
+                title = "Skullcandy Headphones",
+                prise = 8000,
+                imageUrl = "https://thumb.tildacdn.com/tild3365-3834-4530-b931-306639303339/-/format/webp/method_active_wirele.jpg",
+            ),
         )
     }
 }
+
+//AllProducts(
+//id = UUID.randomUUID().toString(),
+//title = "Skullcandy Venue Headphones",
+//price = "$48",
+//imageId = "https://thumb.tildacdn.com/tild6338-6362-4761-a435-366432316137/-/format/webp/venue_black.jpg",
+//description = "Overhead wireless headphones Skullcandy Venue have a fairly minimalistic design and a small company logo on the side",
+//favorite = false,
+//
+//),
+//
+//AllProducts(
+//id = UUID.randomUUID().toString(),
+//title = "JBL Flip Essential (Original) Column",
+//price = "$79",
+//imageId = "https://www.gadget.kg/upload/catalog/57/item_5622/7efab3899b54f83ea028702115ff49b7.jpg",
+//description = "JBL Flip Essential is equipped with a built–in lithium-ion battery" +
+//" with a capacity of 3000 mAh, which will allow you to listen to music for" +
+//" up to 10 hours without having to recharge. The time to fully charge " +
+//"the battery from \"zero\" is about 3.5 hours.",
+//favorite = false,

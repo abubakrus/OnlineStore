@@ -37,7 +37,6 @@ class FragmentCategories : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initViews()
         observeData()
-
     }
 
     private fun initViews() = with(binding){
