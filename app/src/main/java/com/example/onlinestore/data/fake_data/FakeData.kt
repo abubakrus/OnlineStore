@@ -3,7 +3,11 @@ package com.example.onlinestore.data.fake_data
 import com.example.onlinestore.domain.models.AllCategory
 import com.example.onlinestore.domain.models.CategoryEvent
 import com.example.onlinestore.domain.models.RecommendationEvent
+import com.example.onlinestore.domain.models.SearchModel
 import com.example.onlinestore.domain.models.TopProduct
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
 import java.util.UUID
 
 class FakeData {

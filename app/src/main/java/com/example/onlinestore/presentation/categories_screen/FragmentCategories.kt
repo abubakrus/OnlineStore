@@ -6,18 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import android.widget.SearchView
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.onlinestore.R
+import com.example.onlinestore.data.fake_data.FakeData
 import com.example.onlinestore.databinding.FragmentCategoriesBinding
-import com.example.onlinestore.databinding.FragmentMainBinding
 import com.example.onlinestore.presentation.categories_screen.recycler_view.CategoryEventAdapter
-import com.example.onlinestore.presentation.main_screen.recycler_view.top_product.TopProductAdapter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-class FragmentCategories : Fragment() {
+class FragmentCategories : Fragment(), SearchView.OnQueryTextListener {
     private val binding: FragmentCategoriesBinding by lazy {
         FragmentCategoriesBinding.inflate(layoutInflater)
     }
@@ -26,6 +24,9 @@ class FragmentCategories : Fragment() {
 
     private val categoryEventAdapter: CategoryEventAdapter by lazy {
         CategoryEventAdapter()
+    }
+    private val allList by lazy {
+        FakeData()
     }
 
     override fun onCreateView(
@@ -37,6 +38,7 @@ class FragmentCategories : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initViews()
         observeData()
+//        binding.includeCategoriesTopContent.searchView.setOnQueryTextListener(this)
     }
 
     private fun initViews() = with(binding){
@@ -47,5 +49,14 @@ class FragmentCategories : Fragment() {
             categoryEventAdapter.updateData(it)
         }.launchIn(lifecycleScope)
     }
+
+    override fun onQueryTextSubmit(p0: String?): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun onQueryTextChange(p0: String?): Boolean {
+        TODO("Not yet implemented")
+    }
+
 
 }
