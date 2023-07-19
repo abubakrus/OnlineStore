@@ -16,8 +16,8 @@
             android:id="@+id/search_view"
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:background="@drawable/search_view_background"
-            android:elevation="6dp"
+            android:background="@drawable/search_color_background"
+            android:elevation="2dp"
             android:iconifiedByDefault="false"
             android:queryBackground="@null"
             android:queryHint="@string/search"
@@ -28,7 +28,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:elevation="6dp"
-            android:background="@drawable/search_view_background"
+            android:background="@drawable/search_color_background"
             app:cardCornerRadius="50dp"
             app:cardElevation="0dp">
 

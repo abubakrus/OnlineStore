@@ -12,7 +12,7 @@ class AllCategoryViewHolder(
     fun bind(allCategory: AllCategory) = with(binding){
         titleProduct.text = allCategory.title
         descripitionProduct.text = allCategory.descripition
-        priseProduct.text = allCategory.prise.toString()
+        priseProduct.text = allCategory.price.toString()
         loadImageByUrl(imageUrl = allCategory.imageUrl, imageView = imageView)
     }
     private fun loadImageByUrl(imageUrl:String, imageView: ImageView){
