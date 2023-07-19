@@ -10,4 +10,6 @@
     <attr name="search_icon" format="reference"/>
     <attr name="searchViewBackgroundColor" format="reference|color"/>
     <attr name="basket_card_background" format="reference|color"/>
+    <attr name="theme_search_view_style" format="reference|color"/>
+
 </resources>

@@ -34,14 +34,12 @@
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/search_view_background"
-            android:backgroundTint="?attr/categoriesBackgroundColor"
-            android:elevation="0dp"
+            android:elevation="6dp"
             android:iconifiedByDefault="false"
+            android:inputType="none"
             android:queryBackground="@null"
             android:queryHint="@string/search"
-            android:searchIcon="?attr/search_icon"
-            android:inputType="none"
-            />
+            android:searchIcon="?attr/search_icon" />
 
     </LinearLayout>
 
@@ -50,9 +48,8 @@
         android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginTop="30dp"
-        android:backgroundTint="?attr/categoriesBackgroundColor"
-        android:elevation="4dp"
-        app:cardBackgroundColor="@android:color/transparent"
+        android:background="@drawable/search_view_background"
+        android:elevation="6dp"
         app:cardCornerRadius="50dp"
         app:cardElevation="0dp">
 
