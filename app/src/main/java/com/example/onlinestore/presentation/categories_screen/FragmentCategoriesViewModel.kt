@@ -14,6 +14,7 @@ class FragmentCategoriesViewModel : ViewModel() {
 
     private val _categoriesEventFlow = MutableStateFlow<List<CategoryEvent>>(emptyList())
     val categoriesEventFlow = _categoriesEventFlow.asStateFlow()
+
     init {
         val categoryEvent = fetchAllCategoriesEventUseCase.invoke()
         _categoriesEventFlow.tryEmit(categoryEvent)
